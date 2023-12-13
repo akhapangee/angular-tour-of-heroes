@@ -3,8 +3,14 @@
     <div><span>id: </span>{{hero.id}}</div>
     <div>
       <label for="hero-name">Hero name: </label>
+
+       <!-- ngModel is part of FormsModule and used for two way data binding between form control inputs and application data. -->
       <input id="hero-name" [(ngModel)]="hero.name" placeholder="Hero name"/>
+     
     </div>
+
+    <!-- The click even calls the relevent method from hero detail component. -->
     <button type="button" (click)="save()">Save</button>
     <button type="button" (click)="goBack()">Back</button>
+    
   </div>

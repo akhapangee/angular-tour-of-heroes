@@ -9,11 +9,14 @@ export class MessageService {
 
   constructor() { }
 
+  // Add message to array
   add(message: string){
     this.messages.push(message);
   }
 
+  // Clear messages string array
   clear(){
     this.messages = [];
   }
+
 }

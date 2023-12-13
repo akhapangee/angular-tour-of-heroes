@@ -15,8 +15,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class HeroService {
 
+  // Web api url
   private heroesUrl = 'api/heroes';
 
+  // HTTP Header request data of JSON data type
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
   };
@@ -26,8 +28,11 @@ export class HeroService {
     private http: HttpClient) { }
 
 
-  // If getHeroes() can't return immediately with hero data, it shouldn't be synchronous, 
-  // because that would block the browser as it waits to return data.
+  /**
+   * If getHeroes() can't return immediately with hero data, it shouldn't be synchronous, 
+   * because that would block the browser as it waits to return data.
+   * So, we are using Obsevable for asynchronous connection
+   */
   getHeroes(): Observable<Hero[]> {
     return this.http.get<Hero[]>(this.heroesUrl)
       .pipe(
