@@ -1,7 +1,4 @@
 # Tour Of Heroes
-
-This project is based on tutorial - https://angular.io/tutorial/tour-of-heroes
-
 ## Features of application
 
 * Gets a list of heroes from simulated data server based on https://github.com/angular/angular/tree/main/packages/misc/angular-in-memory-web-api
@@ -44,3 +41,13 @@ This project is based on tutorial - https://angular.io/tutorial/tour-of-heroes
    - getHeroes() - gets heroes array data with the help of injected HeroService
 
 
+3. HeroDetailComponent
+4. HeroSearchComponent
+5. HeroesComponent
+6. MessagesComponent
+
+
+### Services
+1. HeroService
+2. InMemoryDataService
+3. MessageService
