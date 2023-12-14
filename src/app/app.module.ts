@@ -13,6 +13,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { InMemoryDataService } from './services/in-memory-data.service';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { HeroSearchComponent } from './components/hero-search/hero-search.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { HeroSearchComponent } from './components/hero-search/hero-search.compon
     // Remove it when a real server is ready to receive requests.
     HttpClientInMemoryWebApiModule.forRoot(
       InMemoryDataService, { dataEncapsulation: false }
-    )
+    ),
+         NgbModule
   ],
   providers: [
     provideClientHydration()

@@ -1,14 +1,12 @@
 <!-- List of Top Heroes End -->
 <h2>Top Heroes</h2>
-<div class="heroes-menu">
+<div class="heroes-menu form-group">
   <!-- *ngFor is a structural directive which is used to repeat values -->
   <a *ngFor="let hero of heroes" routerLink="/detail/{{hero.id}}"> {{hero.name}}
   </a>
 
 </div>
 <!-- List of Top Heroes End -->
-
-
 
 <!-- Hero search start -->
 <app-hero-search></app-hero-search>

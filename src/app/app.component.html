@@ -1,13 +1,16 @@
-<h1>{{title}}</h1>
+<div class="container">
+    <h1>{{title}}</h1>
 
-<nav>
-    <!-- The routerLink is the selector for the RouterLink directive that turns user clicks into router navigations. 
-    It's another of the public directives in the RouterModule. -->
-    <a routerLink="/dashboard">Dashboard</a> &nbsp;
-    <a routerLink="/heroes">Heroes</a>
-</nav>
+    <nav class="mb-3">
+        <!-- The routerLink is the selector for the RouterLink directive that turns user clicks into router navigations. 
+        It's another of the public directives in the RouterModule. -->
+        <a routerLink="/dashboard">Dashboard</a> &nbsp;
+        <a routerLink="/heroes">Heroes</a>
+    </nav>
 
-<!-- <router-outlet> tells the router where to display routed views. -->
-<router-outlet></router-outlet>
+    <!-- Main content -->
+    <router-outlet></router-outlet>
 
-<app-messages></app-messages>
+    <app-messages></app-messages>
+
+</div>
